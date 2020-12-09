@@ -1,0 +1,20 @@
+platform :ios, '9.0'
+
+def pods 
+	pod 'NTESFoundation’, :path => '../'
+    pod 'YYKit'
+    pod 'FPSLabel'
+end
+
+
+
+target 'Example' do
+    pods
+end
+
+target 'ExampleTests' do
+
+end
+
+
+

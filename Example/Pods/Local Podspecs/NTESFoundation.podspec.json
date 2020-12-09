@@ -1,0 +1,77 @@
+{
+  "name": "NTESFoundation",
+  "version": "0.8.8",
+  "summary": "NetEase",
+  "homepage": "https://g.hz.netease.com/ntes-onepiece-ios/NTESFoundation",
+  "license": {
+    "type": "Copyright",
+    "text": "Copyright 2019 NetEase"
+  },
+  "authors": "NetEase One Piece Group",
+  "source": {
+    "git": "https://g.hz.netease.com/ntes-onepiece-ios/NTESFoundation.git",
+    "tag": "0.8.8"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "public_header_files": "NTESFoundation/NTESFoundation.h",
+  "source_files": "NTESFoundation/NTESFoundation.h",
+  "subspecs": [
+    {
+      "name": "Category",
+      "source_files": "NTESFoundation/Category/*.{h,m,mm}"
+    },
+    {
+      "name": "Toolkit",
+      "source_files": "NTESFoundation/Toolkit/**/*.{h,m,mm}",
+      "dependencies": {
+        "FMDB": [
+          "~> 2.7.2"
+        ],
+        "Reachability": [
+          "~> 3.2"
+        ],
+        "NTESFoundation/Category": [
+
+        ]
+      }
+    },
+    {
+      "name": "Network",
+      "source_files": "NTESFoundation/Network/**/*.{h,m,mm}",
+      "dependencies": {
+        "NTESFoundation/Toolkit": [
+
+        ]
+      }
+    },
+    {
+      "name": "Service",
+      "source_files": "NTESFoundation/Service/*.{h,m,mm}",
+      "dependencies": {
+        "NTESFoundation/Toolkit": [
+
+        ]
+      }
+    },
+    {
+      "name": "Storage",
+      "source_files": "NTESFoundation/Storage/*.{h,m,mm}",
+      "dependencies": {
+        "NTESFoundation/Toolkit": [
+
+        ]
+      }
+    },
+    {
+      "name": "UI",
+      "source_files": "NTESFoundation/UI/**/*.{h,m,mm}",
+      "dependencies": {
+        "NTESFoundation/Toolkit": [
+
+        ]
+      }
+    }
+  ]
+}
